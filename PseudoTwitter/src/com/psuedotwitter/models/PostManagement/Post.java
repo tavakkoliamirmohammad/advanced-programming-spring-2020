@@ -57,10 +57,21 @@ public class Post {
 
         ArrayList<Post> userPosts = postsForUser(user);
 
-        for(Post post: userPosts) {
-            post.showPost();
-            System.out.println();
+        if (userPosts.isEmpty()){
+            System.out.println("No Posts yet!");
         }
+
+        else {
+            int count = 1;
+            for(Post post: userPosts) {
+                System.out.print(count + ". ");
+                post.showPost();
+                System.out.println();
+                ++count;
+            }
+
+        }
+
 
     }
 
@@ -70,9 +81,19 @@ public class Post {
 
         ArrayList<Post> userPosts = userPosts(user);
 
-        for(Post post: userPosts){
-            post.showPost();
-            System.out.println();
+
+        if (userPosts.isEmpty()){
+            System.out.println("No Posts yet!");
+        }
+
+        else {
+            int count = 1;
+            for(Post post: userPosts){
+                System.out.print(count + ". ");
+                post.showPost();
+                System.out.println();
+                ++count;
+            }
         }
 
     }

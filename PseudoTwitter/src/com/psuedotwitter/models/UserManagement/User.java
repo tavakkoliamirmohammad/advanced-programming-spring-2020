@@ -20,6 +20,8 @@ public class User {
         this.username = username;
         this.password = password;
         this.email = email;
+        this.userRelations = new ArrayList<>();
+        this.posts = new ArrayList<>();
     }
 
 
@@ -138,7 +140,11 @@ public class User {
 
     // Post
     public void post(String text) {
-        // add post
+
+        Post post = new Post(text);
+
+        posts.add(post);
+
     }
 
 
